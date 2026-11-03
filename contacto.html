@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro & Contacto | Gabriel Garay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom py-2">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold text-decoration-none fs-4" href="Presentacion.html">Gabriel<span>.dev</span></a>
+      
+      <div class="page-pills-nav d-none d-lg-flex">
+        <a href="Presentacion.html" class="page-pill-link"><i class="bi bi-house-door me-1"></i>Todo / Inicio</a>
+        <a href="proyectos.html" class="page-pill-link"><i class="bi bi-code-slash me-1"></i>Proyectos & IA</a>
+        <a href="pasatiempos.html" class="page-pill-link"><i class="bi bi-heart-pulse me-1"></i>Gym & Pasatiempos</a>
+        <a href="gaming.html" class="page-pill-link"><i class="bi bi-controller me-1"></i>Gaming & Música</a>
+        <a href="contacto.html" class="page-pill-link active"><i class="bi bi-envelope-check me-1"></i>Contacto</a>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button id="themeBtn" class="btn-theme-toggle">
+          <i class="bi bi-sun-fill" id="themeIcon"></i>
+          <span id="themeText" class="d-none d-sm-inline">Modo Claro</span>
+        </button>
+        <button id="burguerBtn" aria-label="Abrir navegación">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+
+      <div class="nav-menu-wrapper" id="navMenu">
+        <ul class="list-unstyled m-0">
+          <li><a class="nav-link" href="Presentacion.html"><i class="bi bi-house-door me-2"></i>Inicio (Vista Completa)</a></li>
+          <li><a class="nav-link" href="proyectos.html"><i class="bi bi-folder2-open me-2"></i>Proyectos & Desarrollo Profesional</a></li>
+          <li><a class="nav-link" href="pasatiempos.html"><i class="bi bi-trophy me-2"></i>Pasatiempos, Gimnasio & Horario</a></li>
+          <li><a class="nav-link" href="gaming.html"><i class="bi bi-joystick me-2"></i>Gaming & Música</a></li>
+          <li><a class="nav-link text-cyan fw-bold" href="contacto.html"><i class="bi bi-person-lines-fill me-2"></i>Registro & Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 flex-grow-1">
+    <div class="text-center mb-5">
+      <span class="badge-custom d-inline-block mb-2 text-uppercase">UPDS • Contacto Directo & Validación DOM</span>
+      <h1 class="fw-bold">Registro Académico & Redes Sociales</h1>
+      <p class="text-muted mx-auto" style="max-width: 800px;">
+        Ponte en contacto directo conmigo para proyectos de desarrollo web, bases de datos, servicio técnico de hardware como "Tec. Gabriel" o completa el formulario universitario con validación reactiva en tiempo real.
+      </p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <a href="https://wa.me/59160120550" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+          <div class="card-custom p-4 text-center shadow d-flex flex-column">
+            <i class="bi bi-whatsapp fs-1 text-success mb-2"></i>
+            <h5 class="card-title">WhatsApp Directo</h5>
+            <p class="card-text flex-grow-1 small">Atención inmediata para consultas de proyectos, ensamblaje y mantenimiento de PCs o coordinación académica en La Paz.</p>
+            <span class="badge badge-highlight mt-2">+591 60120550</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.facebook.com/gabriel.garay.5458/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+          <div class="card-custom p-4 text-center shadow d-flex flex-column">
+            <i class="bi bi-facebook fs-1 text-primary mb-2"></i>
+            <h5 class="card-title">Facebook Oficial</h5>
+            <p class="card-text flex-grow-1 small">Conecta conmigo en mi perfil personal de Facebook para seguir mis actividades, publicaciones y contacto social.</p>
+            <span class="badge badge-tech mt-2">gabriel.garay.5458</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.tiktok.com/@pou_gotico_culon" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+          <div class="card-custom p-4 text-center shadow d-flex flex-column">
+            <i class="bi bi-tiktok fs-1 text-cyan mb-2"></i>
+            <h5 class="card-title">TikTok</h5>
+            <p class="card-text flex-grow-1 small">Sígueme en mi cuenta de TikTok donde comparto clips, humor, gaming competitivo y contenido variado.</p>
+            <span class="badge badge-tech mt-2">@pou_gotico_culon</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <section id="contacto" class="mb-5">
+      <div class="section-header-wrap" data-section-target="#contacto-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Formulario de Registro Académico</h2>
+            <p class="text-muted small m-0 mt-1">Demostración de validación reactiva en tiempo real mediante eventos del DOM en JavaScript puro.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-collapse me-1"></i>Clic para plegar</span>
+          <button type="button" class="section-burger-btn" data-section-target="#contacto-content" aria-label="Desplegar o plegar sección Formulario">
+            <i class="bi bi-arrows-collapse"></i>
+            <span class="burger-text">Plegar</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content" id="contacto-content">
+        <div class="card-custom p-4 p-md-5 shadow">
+          <p class="card-text mb-4">
+            Completa el siguiente formulario con tus datos universitarios o de contacto. Cada campo cuenta con <strong>validación reactiva instantánea</strong> (verificación de longitud y caracteres alfabéticos en nombre, selección de fecha, expresión regular para números de celular bolivianos de 8 dígitos iniciados en 6 o 7, selección obligatoria de carrera universitaria y rango de semestre del 1 al 10). Al enviar o interactuar con el formulario, el sistema verificará cada regla y te permitirá remitir la confirmación directamente a mi WhatsApp.
+          </p>
+          
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              
+              <!-- 1. Nombre Completo -->
+              <div class="col-12">
+                <label for="nombre" class="form-label small fw-bold text-muted">
+                  Nombre Completo <span class="text-danger">*</span>
+                </label>
+                <input type="text" id="nombre" class="form-control form-control-custom" placeholder="Ej. Gabriel Alejandro Garay Esprella" autocomplete="name">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Mínimo 3 letras. Solo caracteres alfabéticos y espacios (sin números).</small>
+                <div class="error-feedback" id="err-nombre"></div>
+                <div class="valid-feedback-custom" id="val-nombre"></div>
+              </div>
+
+              <!-- 2. Fecha de Registro -->
+              <div class="col-md-6">
+                <label for="fecha" class="form-label small fw-bold text-muted">
+                  Fecha de Registro <span class="text-danger">*</span>
+                </label>
+                <input type="date" id="fecha" class="form-control form-control-custom">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Selecciona la fecha válida de registro en el calendario.</small>
+                <div class="error-feedback" id="err-fecha"></div>
+                <div class="valid-feedback-custom" id="val-fecha"></div>
+              </div>
+
+              <!-- 3. Celular -->
+              <div class="col-md-6">
+                <label for="celular" class="form-label small fw-bold text-muted">
+                  Celular (8 dígitos - Bolivia) <span class="text-danger">*</span>
+                </label>
+                <input type="tel" id="celular" class="form-control form-control-custom" placeholder="Ej. 60120550" maxlength="8" autocomplete="tel">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Debe contener exactamente 8 dígitos bolivianos (iniciar en 6 o 7).</small>
+                <div class="error-feedback" id="err-celular"></div>
+                <div class="valid-feedback-custom" id="val-celular"></div>
+              </div>
+
+              <!-- 4. Carrera -->
+              <div class="col-md-6">
+                <label for="carrera" class="form-label small fw-bold text-muted">
+                  Carrera Universitaria <span class="text-danger">*</span>
+                </label>
+                <select id="carrera" class="form-select form-control-custom">
+                  <option value="">-- Selecciona carrera universitaria --</option>
+                  <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                  <option value="Ingeniería en Redes y Telecomunicaciones">Ingeniería en Redes y Telecomunicaciones</option>
+                  <option value="Administración de Empresas">Administración de Empresas</option>
+                  <option value="Contaduría Pública">Contaduría Pública</option>
+                  <option value="Derecho">Derecho</option>
+                </select>
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Elige el programa de estudios correspondiente en la UPDS.</small>
+                <div class="error-feedback" id="err-carrera"></div>
+                <div class="valid-feedback-custom" id="val-carrera"></div>
+              </div>
+
+              <!-- 5. Semestre -->
+              <div class="col-md-6">
+                <label for="semestre" class="form-label small fw-bold text-muted">
+                  Semestre Actual (1 al 10) <span class="text-danger">*</span>
+                </label>
+                <input type="number" id="semestre" class="form-control form-control-custom" min="1" max="10" placeholder="Ej. 4">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Número entero entre 1 y 10 correspondiente a tu semestre cursado.</small>
+                <div class="error-feedback" id="err-semestre"></div>
+                <div class="valid-feedback-custom" id="val-semestre"></div>
+              </div>
+
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-submit-form w-100 mt-4">
+              <i class="bi bi-send-check-fill me-2"></i>Registrar Datos y Validar
+            </button>
+          </form>
+
+          <div id="alertaBox" class="mt-4"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="small text-uppercase fw-bold text-cyan mb-2">Conecta conmigo en mis redes oficiales</p>
+      <p class="text-muted small mx-auto mb-3" style="max-width: 650px;">
+        ¿Necesitas desarrollo web, asesoría en bases de datos, servicio técnico de hardware ("Tec. Gabriel") o quieres conversar sobre tecnología, entrenamientos y gaming competitivo? Escríbeme directamente:
+      </p>
+      <div class="social-links-wrapper mb-3">
+        <a href="https://www.facebook.com/gabriel.garay.5458/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+          <i class="bi bi-facebook"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://wa.me/59160120550" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
+          <i class="bi bi-whatsapp"></i>
+          <span>WhatsApp: 60120550</span>
+        </a>
+        <a href="https://www.tiktok.com/@pou_gotico_culon" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+          <i class="bi bi-tiktok"></i>
+          <span>TikTok (@pou_gotico_culon)</span>
+        </a>
+      </div>
+      <p class="text-muted small m-0">&copy; 2026 Gabriel Alejandro Garay Esprella (Tec. Gabriel) • La Paz, Bolivia. Desarrollado con arquitectura modular en HTML5, CSS3, JavaScript y Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

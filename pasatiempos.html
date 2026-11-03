@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gimnasio, Pasatiempos & Horario | Gabriel Garay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom py-2">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold text-decoration-none fs-4" href="Presentacion.html">Gabriel<span>.dev</span></a>
+      
+      <div class="page-pills-nav d-none d-lg-flex">
+        <a href="Presentacion.html" class="page-pill-link"><i class="bi bi-house-door me-1"></i>Todo / Inicio</a>
+        <a href="proyectos.html" class="page-pill-link"><i class="bi bi-code-slash me-1"></i>Proyectos & IA</a>
+        <a href="pasatiempos.html" class="page-pill-link active"><i class="bi bi-heart-pulse me-1"></i>Gym & Pasatiempos</a>
+        <a href="gaming.html" class="page-pill-link"><i class="bi bi-controller me-1"></i>Gaming & Música</a>
+        <a href="contacto.html" class="page-pill-link"><i class="bi bi-envelope-check me-1"></i>Contacto</a>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button id="themeBtn" class="btn-theme-toggle">
+          <i class="bi bi-sun-fill" id="themeIcon"></i>
+          <span id="themeText" class="d-none d-sm-inline">Modo Claro</span>
+        </button>
+        <button id="burguerBtn" aria-label="Abrir navegación">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+
+      <div class="nav-menu-wrapper" id="navMenu">
+        <ul class="list-unstyled m-0">
+          <li><a class="nav-link" href="Presentacion.html"><i class="bi bi-house-door me-2"></i>Inicio (Vista Completa)</a></li>
+          <li><a class="nav-link" href="proyectos.html"><i class="bi bi-folder2-open me-2"></i>Proyectos & Desarrollo Profesional</a></li>
+          <li><a class="nav-link text-cyan fw-bold" href="pasatiempos.html"><i class="bi bi-trophy me-2"></i>Pasatiempos, Gimnasio & Horario</a></li>
+          <li><a class="nav-link" href="gaming.html"><i class="bi bi-joystick me-2"></i>Gaming & Música</a></li>
+          <li><a class="nav-link" href="contacto.html"><i class="bi bi-person-lines-fill me-2"></i>Registro & Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 flex-grow-1">
+    <div class="text-center mb-5">
+      <span class="badge-custom d-inline-block mb-2 text-uppercase">Disciplina Física, Táctica & Agilidad Mental</span>
+      <h1 class="fw-bold">Pasatiempos Productivos & Horario Semanal</h1>
+      <p class="text-muted mx-auto" style="max-width: 800px;">
+        El rendimiento intelectual en la ingeniería de sistemas se potencia con el rendimiento físico: mi rutina incluye entrenar fuerza 6 días a la semana en el gimnasio con alimentación saludable, jugar como armador de voleibol competitivo y ejercitar la mente con el cubo de Rubik.
+      </p>
+    </div>
+
+    <section id="pasatiempos" class="mb-5" data-filter-section="pasatiempos">
+      <div class="section-header-wrap" data-section-target="#pasatiempos-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Mis Pasatiempos <span class="text-cyan">(Productivos)</span></h2>
+            <p class="text-muted small m-0 mt-1">Hábitos diarios que fortalecen mi disciplina mental, mi estado físico y mi capacidad de respuesta bajo presión.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-collapse me-1"></i>Clic para plegar</span>
+          <button type="button" class="section-burger-btn" data-section-target="#pasatiempos-content" aria-label="Desplegar o plegar sección Pasatiempos">
+            <i class="bi bi-arrows-collapse"></i>
+            <span class="burger-text">Plegar</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content" id="pasatiempos-content">
+        <div class="multilevel-filter-box shadow-sm">
+        <div class="filter-level-row">
+          <span class="filter-level-label"><i class="bi bi-funnel-fill"></i>Nivel 1 (Área):</span>
+          <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todos</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="gimnasio">Gimnasio & Fuerza</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="deporte">Deporte Competitivo</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="mental">Agilidad Mental</button>
+        </div>
+        <div class="filter-level-row">
+          <span class="filter-level-label"><i class="bi bi-calendar-check"></i>Nivel 2 (Ritmo):</span>
+          <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todos</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="6dias">6 Días a la Semana</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="nutricion">Alimentación Saludable</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="torneos">Club / Precisión</button>
+        </div>
+        <div class="filter-status-bar">
+          <span data-filter-count>Mostrando 3 de 3</span>
+          <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4" data-item-filtrable data-nivel1="gimnasio" data-nivel2="6dias nutricion">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="text-center mb-3">
+              <i class="bi bi-heart-pulse-fill fs-1 text-cyan"></i>
+              <h4 class="card-title mt-2">Gimnasio & Entrenamiento de Fuerza</h4>
+            </div>
+            <p class="card-text mb-2">
+              El gimnasio es uno de los pilares fundamentales de mi día a día: asisto religiosamente <strong>6 días a la semana</strong> con un enfoque estricto en <strong>entrenamiento de fuerza e hipertrofia</strong> mediante rutinas estructuradas (Push / Pull / Legs).
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Sobrecarga Progresiva:</strong> Registro constante de marcas en ejercicios compuestos pesados (press de banca, sentadilla libre, peso muerto y dominadas lastradas) buscando superar mis récords personales semana tras semana.</li>
+              <li><strong>Alimentación Saludable y Nutrición:</strong> Trato de mantener una dieta limpia, balanceada y alta en proteínas, priorizando alimentos reales, hidratación constante y descanso adecuado para optimizar mi recuperación muscular y mi energía mental al programar.</li>
+            </ul>
+            <div class="mt-2 text-center">
+              <span class="badge badge-highlight">6 Días / Semana</span>
+              <span class="badge badge-tech">Entrenamiento de Fuerza</span>
+              <span class="badge badge-tech">Alimentación Saludable</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-item-filtrable data-nivel1="deporte" data-nivel2="torneos">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="text-center mb-3">
+              <i class="bi bi-dribbble fs-1 text-cyan"></i>
+              <h4 class="card-title mt-2">Voleibol Competitivo</h4>
+            </div>
+            <p class="card-text mb-2">
+              Me desempeño como <strong>Armador (Colocador)</strong> a nivel competitivo de club dentro de la <strong>Asociación de Voleibol de La Paz</strong>, una posición que exige liderazgo, frialdad y lectura táctica en fracciones de segundo.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Estrategia y Distribución de Juego:</strong> Como armador, analizo en tiempo real el bloqueo rival para engañar a la defensa y dejar a mis atacantes en situación de punto directo (primeros tiempos, zagueros y bolas rápidas por las puntas).</li>
+              <li><strong>Potencia y Salto Vertical:</strong> Complemento mi técnica de manos con trabajo pliométrico para sostener un buen alcance en el bloqueo, saque flotante/en potencia y defensa de campo.</li>
+            </ul>
+            <div class="mt-2 text-center">
+              <span class="badge badge-tech">Posición: Armador</span>
+              <span class="badge badge-tech">Asociación La Paz</span>
+              <span class="badge badge-tech">Visión Táctica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-item-filtrable data-nivel1="mental" data-nivel2="torneos">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="text-center mb-3">
+              <i class="bi bi-box fs-1 text-cyan"></i>
+              <h4 class="card-title mt-2">Speedcubing (Rubik 3x3)</h4>
+            </div>
+            <p class="card-text mb-2">
+              Entreno la agilidad mental, la memoria espacial y la destreza motora resolviendo el cubo de Rubik 3x3 de velocidad en un promedio constante de <strong>20 a 30 segundos</strong>.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Método Avanzado CFOP (Fridrich):</strong> Aplicación fluida de las cuatro fases competitivas: Cruz inferior eficiente, emparejamiento intuitivo de <em>F2L (First Two Layers)</em> y ejecución de algoritmos de <em>OLL</em> y <em>PLL</em> para la última capa.</li>
+              <li><strong>Look-Ahead y Pensamiento Algorítmico:</strong> Habilidad para rastrear las siguientes piezas sin detener el giro de los dedos (<em>finger-tricks</em>), un ejercicio mental idéntico a optimizar algoritmos en programación.</li>
+            </ul>
+            <div class="mt-2 text-center">
+              <span class="badge badge-tech">Método Fridrich (CFOP)</span>
+              <span class="badge badge-tech">Promedio 20-30s</span>
+              <span class="badge badge-tech">Agilidad Algorítmica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-filter-msg" data-filter-empty>
+        <i class="bi bi-search fs-3 d-block mb-2 text-cyan"></i>
+        No hay pasatiempos que coincidan con los filtros seleccionados.
+      </div>
+    </div>
+    </section>
+
+    <!-- Horario -->
+    <section id="horario" class="mb-5 pt-4">
+      <div class="section-header-wrap" data-section-target="#horario-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Mi Horario y Organización Semanal</h2>
+            <p class="text-muted small m-0 mt-1">Planificación horaria en tiempo real para estudios, trabajo técnico y entrenamiento.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-collapse me-1"></i>Clic para plegar</span>
+          <button type="button" class="section-burger-btn" data-section-target="#horario-content" aria-label="Desplegar o plegar sección Horario">
+            <i class="bi bi-arrows-collapse"></i>
+            <span class="burger-text">Plegar</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content" id="horario-content">
+        <p class="text-muted mb-4">
+          La clave para equilibrar mis estudios universitarios en Ingeniería de Sistemas en la UPDS, el desarrollo de proyectos de software, los trabajos técnicos de hardware, los <strong>6 días de entrenamiento de fuerza en el gimnasio</strong> y las prácticas de voleibol competitivo radica en una planificación semanal estricta:
+        </p>
+        <div class="iframe-container shadow-lg">
+          <iframe 
+            src="https://docs.google.com/spreadsheets/d/1Ve2lEWtBt52dYJkAR1pNttrgSYGb_Ym4D73VpQwKV1I/htmlembed?widget=true&amp;headers=false" 
+            width="100%" 
+            height="500" 
+            style="border: none;"
+            title="Horario Semanal de Gabriel">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="small text-uppercase fw-bold text-cyan mb-2">Conecta conmigo en mis redes oficiales</p>
+      <p class="text-muted small mx-auto mb-3" style="max-width: 650px;">
+        ¿Necesitas desarrollo web, asesoría en bases de datos, servicio técnico de hardware ("Tec. Gabriel") o quieres conversar sobre tecnología, entrenamientos y gaming competitivo? Escríbeme directamente:
+      </p>
+      <div class="social-links-wrapper mb-3">
+        <a href="https://www.facebook.com/gabriel.garay.5458/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+          <i class="bi bi-facebook"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://wa.me/59160120550" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
+          <i class="bi bi-whatsapp"></i>
+          <span>WhatsApp: 60120550</span>
+        </a>
+        <a href="https://www.tiktok.com/@pou_gotico_culon" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+          <i class="bi bi-tiktok"></i>
+          <span>TikTok (@pou_gotico_culon)</span>
+        </a>
+      </div>
+      <p class="text-muted small m-0">&copy; 2026 Gabriel Alejandro Garay Esprella (Tec. Gabriel) • La Paz, Bolivia. Desarrollado con arquitectura modular en HTML5, CSS3, JavaScript y Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

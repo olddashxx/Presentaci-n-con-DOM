@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos, IA & Full Stack | Gabriel Garay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom py-2">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold text-decoration-none fs-4" href="Presentacion.html">Gabriel<span>.dev</span></a>
+      
+      <div class="page-pills-nav d-none d-lg-flex">
+        <a href="Presentacion.html" class="page-pill-link"><i class="bi bi-house-door me-1"></i>Todo / Inicio</a>
+        <a href="proyectos.html" class="page-pill-link active"><i class="bi bi-code-slash me-1"></i>Proyectos & IA</a>
+        <a href="pasatiempos.html" class="page-pill-link"><i class="bi bi-heart-pulse me-1"></i>Gym & Pasatiempos</a>
+        <a href="gaming.html" class="page-pill-link"><i class="bi bi-controller me-1"></i>Gaming & Música</a>
+        <a href="contacto.html" class="page-pill-link"><i class="bi bi-envelope-check me-1"></i>Contacto</a>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button id="themeBtn" class="btn-theme-toggle">
+          <i class="bi bi-sun-fill" id="themeIcon"></i>
+          <span id="themeText" class="d-none d-sm-inline">Modo Claro</span>
+        </button>
+        <button id="burguerBtn" aria-label="Abrir navegación">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+
+      <div class="nav-menu-wrapper" id="navMenu">
+        <ul class="list-unstyled m-0">
+          <li><a class="nav-link" href="Presentacion.html"><i class="bi bi-house-door me-2"></i>Inicio (Vista Completa)</a></li>
+          <li><a class="nav-link text-cyan fw-bold" href="proyectos.html"><i class="bi bi-folder2-open me-2"></i>Proyectos & Desarrollo Profesional</a></li>
+          <li><a class="nav-link" href="pasatiempos.html"><i class="bi bi-trophy me-2"></i>Pasatiempos, Gimnasio & Horario</a></li>
+          <li><a class="nav-link" href="gaming.html"><i class="bi bi-joystick me-2"></i>Gaming & Música</a></li>
+          <li><a class="nav-link" href="contacto.html"><i class="bi bi-person-lines-fill me-2"></i>Registro & Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 flex-grow-1">
+    <div class="text-center mb-5">
+      <span class="badge-custom d-inline-block mb-2 text-uppercase">Portafolio Técnico & Proyección Profesional</span>
+      <h1 class="fw-bold">Proyectos Destacados, IA & Full Stack</h1>
+      <p class="text-muted mx-auto" style="max-width: 800px;">
+        Detalle técnico de los sistemas que he diseñado y construido —desde plataformas de pedidos de trabajos bajo demanda tipo Yango hasta arquitecturas bancarias en SQL Server—, junto con mis aspiraciones hacia la Inteligencia Artificial y el Desarrollo Full Stack.
+      </p>
+    </div>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section id="proyectos" class="mb-5" data-filter-section="proyectos">
+      <div class="section-header-wrap" data-section-target="#proyectos-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Proyectos Destacados</h2>
+            <p class="text-muted small m-0 mt-1">Soluciones tecnológicas diseñadas con enfoque práctico, arquitectura limpia, bases de datos sólidas y experiencia de usuario moderna.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-collapse me-1"></i>Clic para plegar</span>
+          <button type="button" class="section-burger-btn" data-section-target="#proyectos-content" aria-label="Desplegar o plegar sección Proyectos">
+            <i class="bi bi-arrows-collapse"></i>
+            <span class="burger-text">Plegar</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content" id="proyectos-content">
+        <div class="multilevel-filter-box shadow-sm">
+        <div class="filter-level-row">
+          <span class="filter-level-label"><i class="bi bi-funnel-fill"></i>Nivel 1 (Tipo):</span>
+          <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todos</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="servicios">Apps de Servicios</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="web">Plataformas Web</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="datos">Base de Datos</button>
+        </div>
+        <div class="filter-level-row">
+          <span class="filter-level-label"><i class="bi bi-layers-fill"></i>Nivel 2 (Enfoque):</span>
+          <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todos</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="ondemand">Pedidos On-Demand (Tipo Yango)</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="frontend">Frontend & UX</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="backend">Backend & SQL</button>
+        </div>
+        <div class="filter-status-bar">
+          <span data-filter-count>Mostrando 4 de 4</span>
+          <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-item-filtrable data-nivel1="servicios web" data-nivel2="ondemand frontend backend">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h4 class="card-title m-0"><i class="bi bi-tools me-2"></i>Sistema de Pedidos de Trabajos y Oficios (Estilo Yango)</h4>
+              <span class="badge badge-highlight">Destacado</span>
+            </div>
+            <p class="card-text mt-2 mb-2">
+              Plataforma integral de servicios bajo demanda desarrollada hace tiempo con una lógica operativa similar a <strong>Yango o Uber</strong>, pero transformando el concepto tradicional de entregas de comida o viajes hacia la <strong>solicitud inmediata de trabajos técnicos y oficios del hogar</strong> como plomería, albañilería, electricidad, carpintería, cerrajería y pintura.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Conexión Cliente-Especialista en Tiempo Real:</strong> Permite al usuario publicar una solicitud detallando el problema (ej. fuga de tubería o refacción de muro), ubicación exacta y nivel de urgencia.</li>
+              <li><strong>Sistema de Cotización y Despacho:</strong> Los técnicos cercanos reciben la alerta del pedido, envían su propuesta económica y tiempo estimado de llegada, permitiendo al cliente elegir según calificación y experiencia previa.</li>
+              <li><strong>Trazabilidad Completa del Servicio:</strong> Seguimiento por etapas desde la aceptación del pedido, llegada al domicilio y ejecución de la obra hasta la conformidad final y reseña del cliente.</li>
+            </ul>
+            <div class="mt-3">
+              <span class="badge badge-tech">Modelo On-Demand (Tipo Yango)</span>
+              <span class="badge badge-tech">Plomería & Albañilería</span>
+              <span class="badge badge-tech">Gestión de Pedidos</span>
+              <span class="badge badge-tech">Full Stack UI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-item-filtrable data-nivel1="web" data-nivel2="frontend">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <h4 class="card-title mb-2"><i class="bi bi-hospital me-2"></i>SALUD CENTRAL — Gestión Hospitalaria</h4>
+            <p class="card-text mb-2">
+              Sistema web especializado en la administración y reserva de citas médicas clínicas, diseñado y maquetado para la materia de <strong>Programación Web II</strong> con el objetivo de modernizar la atención al paciente y eliminar las filas presenciales.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Reserva Inteligente por Especialidad:</strong> Interfaz intuitiva que organiza consultorios de Medicina General, Cardiología, Pediatría, Odontología y Traumatología con disponibilidad de turnos actualizada.</li>
+              <li><strong>Manipulación Avanzada del DOM & Mock Data:</strong> Manejo estructurado de arreglos de objetos en JavaScript para simular la base de datos de doctores, pacientes y horarios sin recargar la página.</li>
+              <li><strong>Feedback Visual y Modales Personalizados:</strong> Validación instantánea de formularios clínicos y generación de comprobantes de cita mediante ventanas modales dinámicas en Bootstrap 5.</li>
+            </ul>
+            <div class="mt-3">
+              <span class="badge badge-tech">Bootstrap 5</span>
+              <span class="badge badge-tech">JavaScript DOM</span>
+              <span class="badge badge-tech">Mock Data JSON</span>
+              <span class="badge badge-tech">UX/UI Clínico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-item-filtrable data-nivel1="web" data-nivel2="frontend">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <h4 class="card-title mb-2"><i class="bi bi-bag-check me-2"></i>Pinta Real — E-Commerce & Catálogo de Moda</h4>
+            <p class="card-text mb-2">
+              Plataforma de comercio electrónico y escaparate virtual de alto impacto visual creada para la exhibición y venta de ropa de marca, enfocada en ofrecer una experiencia de compra fluida, estética y 100% adaptable a cualquier dispositivo móvil o escritorio.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Catálogo Interactivo de Prendas:</strong> Presentación detallada de colecciones urbanas y casuales con visualización de tallas, colores disponibles, precios promocionales y etiquetas de stock.</li>
+              <li><strong>Diseño Mobile-First y Animaciones Suaves:</strong> Uso de grillas responsivas en HTML5/CSS3 y efectos dinámicos con jQuery para transiciones de galería, vista rápida de productos y filtrado por temporada.</li>
+              <li><strong>Optimización de Conversión:</strong> Flujo de navegación pensado para reducir la fricción del usuario desde que explora el catálogo hasta que selecciona su prenda ideal.</li>
+            </ul>
+            <div class="mt-3">
+              <span class="badge badge-tech">HTML5 & CSS3</span>
+              <span class="badge badge-tech">Bootstrap 5</span>
+              <span class="badge badge-tech">jQuery</span>
+              <span class="badge badge-tech">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-item-filtrable data-nivel1="datos" data-nivel2="backend">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <h4 class="card-title mb-2"><i class="bi bi-database-check me-2"></i>BancoBNB — Arquitectura de Base de Datos Bancaria</h4>
+            <p class="card-text mb-2">
+              Proyecto de ingeniería y administración de bases de datos relacionales a gran escala en <strong>Microsoft SQL Server</strong>, modelando la infraestructura crítica de recursos humanos, cargos jerárquicos y operaciones de una entidad financiera.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Volumen Masivo de Datos (+20,000 Registros):</strong> Creación y poblamiento automatizado de tablas relacionales como <code>TPersonal</code> y <code>TPersonalCargo</code> superando los 20,000 registros consistentes para pruebas de estrés y rendimiento.</li>
+              <li><strong>Programación T-SQL Avanzada:</strong> Implementación de procedimientos almacenados (<em>Stored Procedures</em>), cursores, funciones escalares, triggers de integridad referencial e índices para acelerar consultas complejas.</li>
+              <li><strong>Seguridad y Respaldos Automatizados:</strong> Configuración de planes de mantenimiento y scripts de <em>Backup</em> completos y diferenciales para garantizar cero pérdida de información transaccional.</li>
+            </ul>
+            <div class="mt-3">
+              <span class="badge badge-tech">SQL Server</span>
+              <span class="badge badge-tech">T-SQL Scripts</span>
+              <span class="badge badge-tech">+20,000 Registros</span>
+              <span class="badge badge-tech">Backups Automatizados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-filter-msg" data-filter-empty>
+        <i class="bi bi-search fs-3 d-block mb-2 text-cyan"></i>
+        No se encontraron proyectos con esa combinación de filtros.
+      </div>
+    </div>
+    </section>
+
+    <!-- INTERESES Y DESARROLLO PROFESIONAL -->
+    <section id="intereses" class="mb-5 pt-4" data-filter-section="intereses">
+      <div class="section-header-wrap" data-section-target="#intereses-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Intereses y Desarrollo Profesional</h2>
+            <p class="text-muted small m-0 mt-1">Mi experiencia técnica actual combinada con mis metas de especialización en Inteligencia Artificial e Ingeniería Full Stack.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-collapse me-1"></i>Clic para plegar</span>
+          <button type="button" class="section-burger-btn" data-section-target="#intereses-content" aria-label="Desplegar o plegar sección Intereses">
+            <i class="bi bi-arrows-collapse"></i>
+            <span class="burger-text">Plegar</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content" id="intereses-content">
+        <div class="multilevel-filter-box shadow-sm">
+        <div class="filter-level-row">
+          <span class="filter-level-label"><i class="bi bi-funnel-fill"></i>Nivel 1 (Rama):</span>
+          <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todas</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="ia">Inteligencia Artificial</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="fullstack">Full Stack & Software</button>
+          <button class="filter-btn" data-filter-level="1" data-filter-value="hardware">Hardware & Soporte</button>
+        </div>
+        <div class="filter-level-row">
+          <span class="filter-level-label"><i class="bi bi-compass"></i>Nivel 2 (Enfoque):</span>
+          <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todos</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="aspiracion">Aspiraciones Profesionales</button>
+          <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="actual">Práctica & Servicio Actual</button>
+        </div>
+        <div class="filter-status-bar">
+          <span data-filter-count>Mostrando 4 de 4</span>
+          <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-item-filtrable data-nivel1="ia" data-nivel2="aspiracion">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-cpu-fill fs-2 text-cyan me-3"></i>
+                <h4 class="card-title m-0">Aspiración: Desarrollo de Inteligencia Artificial</h4>
+              </div>
+              <span class="badge badge-highlight">Meta Profesional</span>
+            </div>
+            <p class="card-text mb-2">
+              Una de mis mayores aspiraciones profesionales es especializarme a fondo en el <strong>Desarrollo de Inteligencia Artificial (IA)</strong>, comprendiendo desde sus bases matemáticas y algorítmicas hasta el despliegue de modelos inteligentes en entornos productivos.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Machine Learning & Deep Learning:</strong> Interés en el entrenamiento de redes neuronales, análisis predictivo de datos y visión por computadora para automatizar procesos complejos.</li>
+              <li><strong>Agentes de IA & Modelos de Lenguaje (LLMs):</strong> Integración de asistentes inteligentes, procesamiento de lenguaje natural y automatización cognitiva dentro de plataformas web y empresariales.</li>
+              <li><strong>Impacto Real:</strong> Crear sistemas capaces de aprender, optimizar recursos y ofrecer soluciones innovadoras en sectores como salud, logística y servicios bajo demanda.</li>
+            </ul>
+            <div class="mt-2">
+              <span class="badge badge-tech">Inteligencia Artificial</span>
+              <span class="badge badge-tech">Machine Learning</span>
+              <span class="badge badge-tech">Redes Neuronales</span>
+              <span class="badge badge-tech">Automatización IA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-item-filtrable data-nivel1="fullstack" data-nivel2="aspiracion">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-layers-half fs-2 text-cyan me-3"></i>
+                <h4 class="card-title m-0">Aspiración: Desarrollador Full Stack</h4>
+              </div>
+              <span class="badge badge-highlight">Meta Profesional</span>
+            </div>
+            <p class="card-text mb-2">
+              Aspiro a consolidarme como un <strong>Desarrollador Full Stack</strong> de alto nivel, capaz de diseñar, construir y escalar aplicaciones completas de principio a fin dominando cada capa de la arquitectura tecnológica.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Dominio del Frontend Moderno:</strong> Creación de interfaces de usuario reactivas, rápidas y accesibles utilizando HTML5 semántico, CSS3 avanzado, JavaScript moderno y frameworks de componentes.</li>
+              <li><strong>Ingeniería Backend y APIs:</strong> Construcción de servidores robustos, lógica de negocio segura, servicios RESTful, autenticación de usuarios y comunicación eficiente entre cliente y servidor.</li>
+              <li><strong>Arquitectura de Datos y Despliegue:</strong> Integración fluida con motores SQL/NoSQL, control de versiones con Git y despliegue de aplicaciones listas para producción.</li>
+            </ul>
+            <div class="mt-2">
+              <span class="badge badge-tech">Full Stack Developer</span>
+              <span class="badge badge-tech">Frontend & Backend</span>
+              <span class="badge badge-tech">APIs REST</span>
+              <span class="badge badge-tech">Arquitectura Escalable</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-item-filtrable data-nivel1="hardware" data-nivel2="actual">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-pc-display fs-2 text-cyan me-3"></i>
+              <h4 class="card-title m-0">Hardware Especializado & "Tec. Gabriel"</h4>
+            </div>
+            <p class="card-text mb-2">
+              De forma independiente brindo servicio técnico profesional bajo el sello de <strong>"Tec. Gabriel"</strong>, combinando pasión por los componentes de alto rendimiento con diagnóstico electrónico y optimización profunda de sistemas.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Ensamblaje de PCs a Medida:</strong> Selección equilibrada de procesadores, tarjetas gráficas, memorias RAM y fuentes certificadas evitando cuellos de botella (<em>bottlenecks</em>) y cuidando la estética y flujo de aire del gabinete.</li>
+              <li><strong>Gestión Térmica y Undervolt en BIOS:</strong> Configuración avanzada de curvas de ventilación, aplicación de pastas térmicas de alta conductividad y ajuste fino de voltajes (<em>Undervolting</em>) para reducir temperaturas manteniendo el máximo rendimiento en FPS y trabajo pesado.</li>
+              <li><strong>Mantenimiento Integral:</strong> Diagnóstico de fallos de hardware, recuperación de sistemas, instalación limpia de sistemas operativos y optimización de latencia.</li>
+            </ul>
+            <div class="mt-2">
+              <span class="badge badge-tech">Ensamblaje Custom PC</span>
+              <span class="badge badge-tech">BIOS & Undervolt</span>
+              <span class="badge badge-tech">Optimización Térmica</span>
+              <span class="badge badge-tech">Soporte Técnico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-item-filtrable data-nivel1="fullstack" data-nivel2="actual">
+          <div class="card-custom p-4 shadow d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-braces fs-2 text-cyan me-3"></i>
+              <h4 class="card-title m-0">Ingeniería de Software & Bases de Datos</h4>
+            </div>
+            <p class="card-text mb-2">
+              En mi formación académica y práctica diaria desarrollo soluciones de software aplicando programación orientada a objetos, estructuras lógicas sólidas y diseño normalizado de bases de datos relacionales.
+            </p>
+            <ul class="detail-list flex-grow-1">
+              <li><strong>Motores Relacionales (SQL Server & PostgreSQL):</strong> Diseño de diagramas Entidad-Relación, normalización, vistas, procedimientos almacenados, respaldos y consultas complejas optimizadas.</li>
+              <li><strong>Ecosistema C# y .NET:</strong> Desarrollo de aplicaciones de escritorio con Windows Forms y arquitecturas web en ASP.NET aplicando buenas prácticas y separación de responsabilidades.</li>
+              <li><strong>Desarrollo Web Interactivo:</strong> Maquetación responsiva con Bootstrap 5 y manipulación pura del DOM con JavaScript para crear experiencias dinámicas sin depender de recargas de página.</li>
+            </ul>
+            <div class="mt-2">
+              <span class="badge badge-tech">SQL Server / PostgreSQL</span>
+              <span class="badge badge-tech">C# / ASP.NET / WinForms</span>
+              <span class="badge badge-tech">HTML5 / CSS3 / JS</span>
+              <span class="badge badge-tech">Bootstrap 5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-filter-msg" data-filter-empty>
+        <i class="bi bi-search fs-3 d-block mb-2 text-cyan"></i>
+        No hay elementos para esa combinación de filtros.
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="small text-uppercase fw-bold text-cyan mb-2">Conecta conmigo en mis redes oficiales</p>
+      <p class="text-muted small mx-auto mb-3" style="max-width: 650px;">
+        ¿Necesitas desarrollo web, asesoría en bases de datos, servicio técnico de hardware ("Tec. Gabriel") o quieres conversar sobre tecnología, entrenamientos y gaming competitivo? Escríbeme directamente:
+      </p>
+      <div class="social-links-wrapper mb-3">
+        <a href="https://www.facebook.com/gabriel.garay.5458/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+          <i class="bi bi-facebook"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://wa.me/59160120550" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
+          <i class="bi bi-whatsapp"></i>
+          <span>WhatsApp: 60120550</span>
+        </a>
+        <a href="https://www.tiktok.com/@pou_gotico_culon" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+          <i class="bi bi-tiktok"></i>
+          <span>TikTok (@pou_gotico_culon)</span>
+        </a>
+      </div>
+      <p class="text-muted small m-0">&copy; 2026 Gabriel Alejandro Garay Esprella (Tec. Gabriel) • La Paz, Bolivia. Desarrollado con arquitectura modular en HTML5, CSS3, JavaScript y Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

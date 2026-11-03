@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Alejandro Garay Esprella | Portafolio Profesional & Personal</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Hoja de Estilos Externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar con Navegación Multipágina y Menú Hamburguesa Permanente -->
+  <nav class="navbar-custom py-2">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold text-decoration-none fs-4" href="Presentacion.html">Gabriel<span>.dev</span></a>
+      
+      <!-- Enlaces de páginas HTML separadas (visibles en escritorio) -->
+      <div class="page-pills-nav d-none d-lg-flex">
+        <a href="Presentacion.html" class="page-pill-link active"><i class="bi bi-house-door me-1"></i>Todo / Inicio</a>
+        <a href="proyectos.html" class="page-pill-link"><i class="bi bi-code-slash me-1"></i>Proyectos & IA</a>
+        <a href="pasatiempos.html" class="page-pill-link"><i class="bi bi-heart-pulse me-1"></i>Gym & Pasatiempos</a>
+        <a href="gaming.html" class="page-pill-link"><i class="bi bi-controller me-1"></i>Gaming & Música</a>
+        <a href="contacto.html" class="page-pill-link"><i class="bi bi-envelope-check me-1"></i>Contacto</a>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <!-- Ejemplo 1: Botón Modo Claro / Oscuro -->
+        <button id="themeBtn" class="btn-theme-toggle">
+          <i class="bi bi-sun-fill" id="themeIcon"></i>
+          <span id="themeText" class="d-none d-sm-inline">Modo Claro</span>
+        </button>
+
+        <!-- Ejemplo 3: Botón Hamburguesa que aparece siempre -->
+        <button id="burguerBtn" aria-label="Abrir navegación">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+
+      <!-- Menú Desplegable controlado por DOM nativo -->
+      <div class="nav-menu-wrapper" id="navMenu">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <p class="small text-uppercase fw-bold text-cyan mb-2"><i class="bi bi-bookmark-star me-1"></i>Secciones en esta página</p>
+            <ul class="list-unstyled m-0">
+              <li><a class="nav-link" href="#inicio" onclick="cerrarMenu()">Inicio & Perfil Personal</a></li>
+              <li><a class="nav-link" href="#proyectos" onclick="cerrarMenu()">Proyectos Destacados</a></li>
+              <li><a class="nav-link" href="#pasatiempos" onclick="cerrarMenu()">Pasatiempos & Gimnasio (6 Días/Sem)</a></li>
+              <li><a class="nav-link" href="#intereses" onclick="cerrarMenu()">Intereses, IA & Full Stack</a></li>
+              <li><a class="nav-link" href="#gustos" onclick="cerrarMenu()">Gaming (Tekken 8 GoD) & Música</a></li>
+              <li><a class="nav-link" href="#horario" onclick="cerrarMenu()">Horario Semanal</a></li>
+              <li><a class="nav-link" href="#contacto" onclick="cerrarMenu()">Registro & Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 border-start border-secondary ps-md-4">
+            <p class="small text-uppercase fw-bold text-cyan mb-2"><i class="bi bi-files me-1"></i>Páginas HTML Independientes</p>
+            <ul class="list-unstyled m-0">
+              <li><a class="nav-link" href="Presentacion.html"><i class="bi bi-house-door me-2"></i>Presentacion.html (Vista Completa)</a></li>
+              <li><a class="nav-link" href="proyectos.html"><i class="bi bi-folder2-open me-2"></i>proyectos.html (Proyectos & Profesión)</a></li>
+              <li><a class="nav-link" href="pasatiempos.html"><i class="bi bi-trophy me-2"></i>pasatiempos.html (Gym, Deporte & Horario)</a></li>
+              <li><a class="nav-link" href="gaming.html"><i class="bi bi-joystick me-2"></i>gaming.html (Gaming & Música)</a></li>
+              <li><a class="nav-link" href="contacto.html"><i class="bi bi-person-lines-fill me-2"></i>contacto.html (Registro & Redes)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main class="container my-5 flex-grow-1">
+    
+    <!-- Sección Hero Ampliada -->
+    <section id="inicio" class="text-center py-5">
+      <span class="badge-custom d-inline-block mb-3 text-uppercase">UPDS • Ingeniería de Sistemas • La Paz, Bolivia</span>
+      <h1 class="display-4 fw-bold mb-3">Gabriel Alejandro Garay Esprella</h1>
+      <p class="lead text-muted mx-auto mb-3" style="max-width: 850px;">
+        Estudiante de Ingeniería de Sistemas en la Universidad Privada Domingo Savio (UPDS), apasionado por la arquitectura de software, las bases de datos relacionales, el diagnóstico avanzado de hardware como <strong>"Tec. Gabriel"</strong> y la innovación tecnológica con proyección directa hacia el <strong>Desarrollo Full Stack</strong> y la <strong>Inteligencia Artificial</strong>.
+      </p>
+      <p class="text-muted mx-auto mb-4" style="max-width: 820px; font-size: 0.96rem; line-height: 1.7;">
+        Combino el rigor analítico de la programación con una disciplina física y competitiva inquebrantable: desde entrenar fuerza pesada 6 días a la semana en el gimnasio y dirigir el juego como armador de voleibol, hasta competir al más alto nivel en torneos de videojuegos alcanzando el rango máximo <em>God of Destruction</em> en Tekken 8.
+      </p>
+      
+      <div class="quote-box p-4 mx-auto shadow-lg" style="max-width: 720px;">
+        <h4 class="fst-italic mb-2">"El sufrimiento es el precio del crecimiento"</h4>
+        <p class="small text-muted m-0">
+          Una filosofía que aplico tanto al superar fallos complejos de código y optimizar consultas de miles de registros en SQL, como al romper mis propios límites bajo la barra en el gimnasio o en el escenario competitivo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Carrusel con Descripciones Enriquecidas -->
+    <section class="mb-5">
+      <div id="miCarrusel" class="carousel slide carousel-fade shadow-lg rounded" data-bs-ride="carousel">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Código Full Stack e IA">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+              <h5 class="fw-bold text-cyan">Ingeniería de Software, Full Stack & Inteligencia Artificial</h5>
+              <p class="small m-0">Construcción de sistemas web interactivos, plataformas de pedidos bajo demanda y modelado de bases de datos de alto rendimiento.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Gimnasio y Fuerza">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+              <h5 class="fw-bold text-cyan">Disciplina Física • Gimnasio 6 Días/Semana & Voleibol</h5>
+              <p class="small m-0">Entrenamiento de fuerza con sobrecarga progresiva, nutrición saludable estructurada y táctica deportiva en cancha.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Hardware y Gaming">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+              <h5 class="fw-bold text-cyan">Hardware Especializado & Gaming de Alto Nivel</h5>
+              <p class="small m-0">Ensamblaje profesional de PCs, optimización térmica en BIOS y mentalidad competitiva en torneos de eSports.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         CONTROLES GLOBALES DE PLEGADO (DISEÑO MINIMALISTA)
+         ==================================================== -->
+    <div class="global-fold-controls">
+      <button type="button" id="btnDesplegarTodo" class="btn-global-fold" title="Expandir todas las secciones a la vez">
+        <i class="bi bi-arrows-expand"></i> Desplegar Todas las Secciones
+      </button>
+      <button type="button" id="btnPlegarTodo" class="btn-global-fold active" title="Plegar todas las secciones para vista ultra minimalista">
+        <i class="bi bi-arrows-collapse"></i> Plegar Todo (Modo Minimalista)
+      </button>
+    </div>
+
+    <!-- ====================================================
+         PROYECTOS DESTACADOS (CON DESCRIPCIONES PROFUNDAS Y FILTRADO MULTINIVEL)
+         ==================================================== -->
+    <section id="proyectos" class="mb-5 pt-4" data-filter-section="proyectos">
+      <div class="section-header-wrap is-collapsed" data-section-target="#proyectos-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Proyectos Destacados</h2>
+            <p class="text-muted small m-0 mt-1">Soluciones tecnológicas diseñadas con enfoque práctico, arquitectura limpia, bases de datos sólidas y experiencia de usuario moderna.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-expand me-1"></i>Clic para desplegar</span>
+          <button type="button" class="section-burger-btn is-collapsed" data-section-target="#proyectos-content" aria-label="Desplegar o plegar sección Proyectos">
+            <i class="bi bi-arrows-expand"></i>
+            <span class="burger-text">Desplegar</span>
+          </button>
+          <a href="proyectos.html" class="btn btn-sm btn-outline-info" onclick="event.stopPropagation()">Ver en página dedicada <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content is-collapsed" id="proyectos-content">
+        <!-- Barra de Filtrado Multinivel: Proyectos -->
+        <div class="multilevel-filter-box shadow-sm">
+          <div class="filter-level-row">
+            <span class="filter-level-label"><i class="bi bi-funnel-fill"></i>Nivel 1 (Tipo):</span>
+            <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todos</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="servicios">Apps de Servicios</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="web">Plataformas Web</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="datos">Base de Datos</button>
+          </div>
+          <div class="filter-level-row">
+            <span class="filter-level-label"><i class="bi bi-layers-fill"></i>Nivel 2 (Enfoque):</span>
+            <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todos</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="ondemand">Pedidos On-Demand (Tipo Yango)</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="frontend">Frontend & UX</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="backend">Backend & SQL</button>
+          </div>
+          <div class="filter-status-bar">
+            <span data-filter-count>Mostrando 4 de 4</span>
+            <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1. Sistema de Pedidos de Trabajos tipo Yango -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="servicios web" data-nivel2="ondemand frontend backend">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="card-title m-0"><i class="bi bi-tools me-2"></i>Sistema de Pedidos de Trabajos y Oficios (Estilo Yango)</h4>
+                <span class="badge badge-highlight">Destacado</span>
+              </div>
+              <p class="card-text mt-2 mb-2">
+                Plataforma integral de servicios bajo demanda desarrollada hace tiempo con una lógica operativa similar a <strong>Yango o Uber</strong>, pero transformando el concepto tradicional de entregas de comida o viajes hacia la <strong>solicitud inmediata de trabajos técnicos y oficios del hogar</strong> como plomería, albañilería, electricidad, carpintería, cerrajería y pintura.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Conexión Cliente-Especialista en Tiempo Real:</strong> Permite al usuario publicar una solicitud detallando el problema (ej. fuga de tubería o refacción de muro), ubicación exacta y nivel de urgencia.</li>
+                <li><strong>Sistema de Cotización y Despacho:</strong> Los técnicos cercanos reciben la alerta del pedido, envían su propuesta económica y tiempo estimado de llegada, permitiendo al cliente elegir según calificación y experiencia previa.</li>
+                <li><strong>Trazabilidad Completa del Servicio:</strong> Seguimiento por etapas desde la aceptación del pedido, llegada al domicilio y ejecución de la obra hasta la conformidad final y reseña del cliente.</li>
+              </ul>
+              <div class="mt-3">
+                <span class="badge badge-tech">Modelo On-Demand (Tipo Yango)</span>
+                <span class="badge badge-tech">Plomería & Albañilería</span>
+                <span class="badge badge-tech">Gestión de Pedidos</span>
+                <span class="badge badge-tech">Full Stack UI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. SALUD CENTRAL -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="web" data-nivel2="frontend">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <h4 class="card-title mb-2"><i class="bi bi-hospital me-2"></i>SALUD CENTRAL — Gestión Hospitalaria</h4>
+              <p class="card-text mb-2">
+                Sistema web especializado en la administración y reserva de citas médicas clínicas, diseñado y maquetado para la materia de <strong>Programación Web II</strong> con el objetivo de modernizar la atención al paciente y eliminar las filas presenciales.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Reserva Inteligente por Especialidad:</strong> Interfaz intuitiva que organiza consultorios de Medicina General, Cardiología, Pediatría, Odontología y Traumatología con disponibilidad de turnos actualizada.</li>
+                <li><strong>Manipulación Avanzada del DOM & Mock Data:</strong> Manejo estructurado de arreglos de objetos en JavaScript para simular la base de datos de doctores, pacientes y horarios sin recargar la página.</li>
+                <li><strong>Feedback Visual y Modales Personalizados:</strong> Validación instantánea de formularios clínicos y generación de comprobantes de cita mediante ventanas modales dinámicas en Bootstrap 5.</li>
+              </ul>
+              <div class="mt-3">
+                <span class="badge badge-tech">Bootstrap 5</span>
+                <span class="badge badge-tech">JavaScript DOM</span>
+                <span class="badge badge-tech">Mock Data JSON</span>
+                <span class="badge badge-tech">UX/UI Clínico</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Pinta Real -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="web" data-nivel2="frontend">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <h4 class="card-title mb-2"><i class="bi bi-bag-check me-2"></i>Pinta Real — E-Commerce & Catálogo de Moda</h4>
+              <p class="card-text mb-2">
+                Plataforma de comercio electrónico y escaparate virtual de alto impacto visual creada para la exhibición y venta de ropa de marca, enfocada en ofrecer una experiencia de compra fluida, estética y 100% adaptable a cualquier dispositivo móvil o escritorio.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Catálogo Interactivo de Prendas:</strong> Presentación detallada de colecciones urbanas y casuales con visualización de tallas, colores disponibles, precios promocionales y etiquetas de stock.</li>
+                <li><strong>Diseño Mobile-First y Animaciones Suaves:</strong> Uso de grillas responsivas en HTML5/CSS3 y efectos dinámicos con jQuery para transiciones de galería, vista rápida de productos y filtrado por temporada.</li>
+                <li><strong>Optimización de Conversión:</strong> Flujo de navegación pensado para reducir la fricción del usuario desde que explora el catálogo hasta que selecciona su prenda ideal.</li>
+              </ul>
+              <div class="mt-3">
+                <span class="badge badge-tech">HTML5 & CSS3</span>
+                <span class="badge badge-tech">Bootstrap 5</span>
+                <span class="badge badge-tech">jQuery</span>
+                <span class="badge badge-tech">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. BancoBNB -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="datos" data-nivel2="backend">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <h4 class="card-title mb-2"><i class="bi bi-database-check me-2"></i>BancoBNB — Arquitectura de Base de Datos Bancaria</h4>
+              <p class="card-text mb-2">
+                Proyecto de ingeniería y administración de bases de datos relacionales a gran escala en <strong>Microsoft SQL Server</strong>, modelando la infraestructura crítica de recursos humanos, cargos jerárquicos y operaciones de una entidad financiera.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Volumen Masivo de Datos (+20,000 Registros):</strong> Creación y poblamiento automatizado de tablas relacionales como <code>TPersonal</code> y <code>TPersonalCargo</code> superando los 20,000 registros consistentes para pruebas de estrés y rendimiento.</li>
+                <li><strong>Programación T-SQL Avanzada:</strong> Implementación de procedimientos almacenados (<em>Stored Procedures</em>), cursores, funciones escalares, triggers de integridad referencial e índices para acelerar consultas complejas.</li>
+                <li><strong>Seguridad y Respaldos Automatizados:</strong> Configuración de planes de mantenimiento y scripts de <em>Backup</em> completos y diferenciales para garantizar cero pérdida de información transaccional.</li>
+              </ul>
+              <div class="mt-3">
+                <span class="badge badge-tech">SQL Server</span>
+                <span class="badge badge-tech">T-SQL Scripts</span>
+                <span class="badge badge-tech">+20,000 Registros</span>
+                <span class="badge badge-tech">Backups Automatizados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="empty-filter-msg" data-filter-empty>
+          <i class="bi bi-search fs-3 d-block mb-2 text-cyan"></i>
+          No se encontraron proyectos con esa combinación de filtros.
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         PASATIEMPOS PRODUCTIVOS (DESCRIPCIONES PROFUNDAS + FILTRADO MULTINIVEL)
+         ==================================================== -->
+    <section id="pasatiempos" class="mb-5 pt-4" data-filter-section="pasatiempos">
+      <div class="section-header-wrap is-collapsed" data-section-target="#pasatiempos-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Mis Pasatiempos <span class="text-cyan">(Productivos)</span></h2>
+            <p class="text-muted small m-0 mt-1">Hábitos diarios que fortalecen mi disciplina mental, mi estado físico y mi capacidad de respuesta bajo presión.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-expand me-1"></i>Clic para desplegar</span>
+          <button type="button" class="section-burger-btn is-collapsed" data-section-target="#pasatiempos-content" aria-label="Desplegar o plegar sección Pasatiempos">
+            <i class="bi bi-arrows-expand"></i>
+            <span class="burger-text">Desplegar</span>
+          </button>
+          <a href="pasatiempos.html" class="btn btn-sm btn-outline-info" onclick="event.stopPropagation()">Ver en página dedicada <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content is-collapsed" id="pasatiempos-content">
+        <!-- Barra de Filtrado Multinivel: Pasatiempos -->
+        <div class="multilevel-filter-box shadow-sm">
+          <div class="filter-level-row">
+            <span class="filter-level-label"><i class="bi bi-funnel-fill"></i>Nivel 1 (Área):</span>
+            <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todos</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="gimnasio">Gimnasio & Fuerza</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="deporte">Deporte Competitivo</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="mental">Agilidad Mental</button>
+          </div>
+          <div class="filter-level-row">
+            <span class="filter-level-label"><i class="bi bi-calendar-check"></i>Nivel 2 (Ritmo):</span>
+            <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todos</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="6dias">6 Días a la Semana</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="nutricion">Alimentación Saludable</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="torneos">Club / Precisión</button>
+          </div>
+          <div class="filter-status-bar">
+            <span data-filter-count>Mostrando 3 de 3</span>
+            <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1. GIMNASIO (6 días a la semana, fuerza y alimentación saludable) -->
+          <div class="col-md-4" data-item-filtrable data-nivel1="gimnasio" data-nivel2="6dias nutricion">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="text-center mb-3">
+                <i class="bi bi-heart-pulse-fill fs-1 text-cyan"></i>
+                <h4 class="card-title mt-2">Gimnasio & Entrenamiento de Fuerza</h4>
+              </div>
+              <p class="card-text mb-2">
+                El gimnasio es uno de los pilares fundamentales de mi día a día: asisto religiosamente <strong>6 días a la semana</strong> con un enfoque estricto en <strong>entrenamiento de fuerza e hipertrofia</strong> mediante rutinas estructuradas (Push / Pull / Legs).
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Sobrecarga Progresiva:</strong> Registro constante de marcas en ejercicios compuestos pesados (press de banca, sentadilla libre, peso muerto y dominadas lastradas) buscando superar mis récords personales semana tras semana.</li>
+                <li><strong>Alimentación Saludable y Nutrición:</strong> Trato de mantener una dieta limpia, balanceada y alta en proteínas, priorizando alimentos reales, hidratación constante y descanso adecuado para optimizar mi recuperación muscular y mi energía mental al programar.</li>
+              </ul>
+              <div class="mt-2 text-center">
+                <span class="badge badge-highlight">6 Días / Semana</span>
+                <span class="badge badge-tech">Entrenamiento de Fuerza</span>
+                <span class="badge badge-tech">Alimentación Saludable</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Voleibol Competitivo -->
+          <div class="col-md-4" data-item-filtrable data-nivel1="deporte" data-nivel2="torneos">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="text-center mb-3">
+                <i class="bi bi-dribbble fs-1 text-cyan"></i>
+                <h4 class="card-title mt-2">Voleibol Competitivo</h4>
+              </div>
+              <p class="card-text mb-2">
+                Me desempeño como <strong>Armador (Colocador)</strong> a nivel competitivo de club dentro de la <strong>Asociación de Voleibol de La Paz</strong>, una posición que exige liderazgo, frialdad y lectura táctica en fracciones de segundo.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Estrategia y Distribución de Juego:</strong> Como armador, analizo en tiempo real el bloqueo rival para engañar a la defensa y dejar a mis atacantes en situación de punto directo (primeros tiempos, zagueros y bolas rápidas por las puntas).</li>
+                <li><strong>Potencia y Salto Vertical:</strong> Complemento mi técnica de manos con trabajo pliométrico para sostener un buen alcance en el bloqueo, saque flotante/en potencia y defensa de campo.</li>
+              </ul>
+              <div class="mt-2 text-center">
+                <span class="badge badge-tech">Posición: Armador</span>
+                <span class="badge badge-tech">Asociación La Paz</span>
+                <span class="badge badge-tech">Visión Táctica</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Speedcubing -->
+          <div class="col-md-4" data-item-filtrable data-nivel1="mental" data-nivel2="torneos">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="text-center mb-3">
+                <i class="bi bi-box fs-1 text-cyan"></i>
+                <h4 class="card-title mt-2">Speedcubing (Rubik 3x3)</h4>
+              </div>
+              <p class="card-text mb-2">
+                Entreno la agilidad mental, la memoria espacial y la destreza motora resolviendo el cubo de Rubik 3x3 de velocidad en un promedio constante de <strong>20 a 30 segundos</strong>.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Método Avanzado CFOP (Fridrich):</strong> Aplicación fluida de las cuatro fases competitivas: Cruz inferior eficiente, emparejamiento intuitivo de <em>F2L (First Two Layers)</em> y ejecución de algoritmos de <em>OLL</em> y <em>PLL</em> para la última capa.</li>
+                <li><strong>Look-Ahead y Pensamiento Algorítmico:</strong> Habilidad para rastrear las siguientes piezas sin detener el giro de los dedos (<em>finger-tricks</em>), un ejercicio mental idéntico a optimizar algoritmos en programación.</li>
+              </ul>
+              <div class="mt-2 text-center">
+                <span class="badge badge-tech">Método Fridrich (CFOP)</span>
+                <span class="badge badge-tech">Promedio 20-30s</span>
+                <span class="badge badge-tech">Agilidad Algorítmica</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="empty-filter-msg" data-filter-empty>
+          <i class="bi bi-search fs-3 d-block mb-2 text-cyan"></i>
+          No hay pasatiempos que coincidan con los filtros seleccionados.
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         INTERESES Y DESARROLLO PROFESIONAL (IA + FULL STACK + DESCRIPCIONES PROFUNDAS)
+         ==================================================== -->
+    <section id="intereses" class="mb-5 pt-4" data-filter-section="intereses">
+      <div class="section-header-wrap is-collapsed" data-section-target="#intereses-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Intereses y Desarrollo Profesional</h2>
+            <p class="text-muted small m-0 mt-1">Mi experiencia técnica actual combinada con mis metas de especialización en Inteligencia Artificial e Ingeniería Full Stack.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-expand me-1"></i>Clic para desplegar</span>
+          <button type="button" class="section-burger-btn is-collapsed" data-section-target="#intereses-content" aria-label="Desplegar o plegar sección Intereses">
+            <i class="bi bi-arrows-expand"></i>
+            <span class="burger-text">Desplegar</span>
+          </button>
+          <a href="proyectos.html#intereses" class="btn btn-sm btn-outline-info" onclick="event.stopPropagation()">Ver en página dedicada <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content is-collapsed" id="intereses-content">
+        <!-- Barra de Filtrado Multinivel: Intereses -->
+        <div class="multilevel-filter-box shadow-sm">
+          <div class="filter-level-row">
+            <span class="filter-level-label"><i class="bi bi-funnel-fill"></i>Nivel 1 (Rama):</span>
+            <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todas</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="ia">Inteligencia Artificial</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="fullstack">Full Stack & Software</button>
+            <button class="filter-btn" data-filter-level="1" data-filter-value="hardware">Hardware & Soporte</button>
+          </div>
+          <div class="filter-level-row">
+            <span class="filter-level-label"><i class="bi bi-compass"></i>Nivel 2 (Enfoque):</span>
+            <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todos</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="aspiracion">Aspiraciones Profesionales</button>
+            <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="actual">Práctica & Servicio Actual</button>
+          </div>
+          <div class="filter-status-bar">
+            <span data-filter-count>Mostrando 4 de 4</span>
+            <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1. Aspiración al Desarrollo de Inteligencia Artificial -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="ia" data-nivel2="aspiracion">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-cpu-fill fs-2 text-cyan me-3"></i>
+                  <h4 class="card-title m-0">Aspiración: Desarrollo de Inteligencia Artificial</h4>
+                </div>
+                <span class="badge badge-highlight">Meta Profesional</span>
+              </div>
+              <p class="card-text mb-2">
+                Una de mis mayores aspiraciones profesionales es especializarme a fondo en el <strong>Desarrollo de Inteligencia Artificial (IA)</strong>, comprendiendo desde sus bases matemáticas y algorítmicas hasta el despliegue de modelos inteligentes en entornos productivos.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Machine Learning & Deep Learning:</strong> Interés en el entrenamiento de redes neuronales, análisis predictivo de datos y visión por computadora para automatizar procesos complejos.</li>
+                <li><strong>Agentes de IA & Modelos de Lenguaje (LLMs):</strong> Integración de asistentes inteligentes, procesamiento de lenguaje natural y automatización cognitiva dentro de plataformas web y empresariales.</li>
+                <li><strong>Impacto Real:</strong> Crear sistemas capaces de aprender, optimizar recursos y ofrecer soluciones innovadoras en sectores como salud, logística y servicios bajo demanda.</li>
+              </ul>
+              <div class="mt-2">
+                <span class="badge badge-tech">Inteligencia Artificial</span>
+                <span class="badge badge-tech">Machine Learning</span>
+                <span class="badge badge-tech">Redes Neuronales</span>
+                <span class="badge badge-tech">Automatización IA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Aspiración a ser Desarrollador Full Stack -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="fullstack" data-nivel2="aspiracion">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-layers-half fs-2 text-cyan me-3"></i>
+                  <h4 class="card-title m-0">Aspiración: Desarrollador Full Stack</h4>
+                </div>
+                <span class="badge badge-highlight">Meta Profesional</span>
+              </div>
+              <p class="card-text mb-2">
+                Aspiro a consolidarme como un <strong>Desarrollador Full Stack</strong> de alto nivel, capaz de diseñar, construir y escalar aplicaciones completas de principio a fin dominando cada capa de la arquitectura tecnológica.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Dominio del Frontend Moderno:</strong> Creación de interfaces de usuario reactivas, rápidas y accesibles utilizando HTML5 semántico, CSS3 avanzado, JavaScript moderno y frameworks de componentes.</li>
+                <li><strong>Ingeniería Backend y APIs:</strong> Construcción de servidores robustos, lógica de negocio segura, servicios RESTful, autenticación de usuarios y comunicación eficiente entre cliente y servidor.</li>
+                <li><strong>Arquitectura de Datos y Despliegue:</strong> Integración fluida con motores SQL/NoSQL, control de versiones con Git y despliegue de aplicaciones listas para producción.</li>
+              </ul>
+              <div class="mt-2">
+                <span class="badge badge-tech">Full Stack Developer</span>
+                <span class="badge badge-tech">Frontend & Backend</span>
+                <span class="badge badge-tech">APIs REST</span>
+                <span class="badge badge-tech">Arquitectura Escalable</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Hardware & Tec. Gabriel -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="hardware" data-nivel2="actual">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-pc-display fs-2 text-cyan me-3"></i>
+                <h4 class="card-title m-0">Hardware Especializado & "Tec. Gabriel"</h4>
+              </div>
+              <p class="card-text mb-2">
+                De forma independiente brindo servicio técnico profesional bajo el sello de <strong>"Tec. Gabriel"</strong>, combinando pasión por los componentes de alto rendimiento con diagnóstico electrónico y optimización profunda de sistemas.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Ensamblaje de PCs a Medida:</strong> Selección equilibrada de procesadores, tarjetas gráficas, memorias RAM y fuentes certificadas evitando cuellos de botella (<em>bottlenecks</em>) y cuidando la estética y flujo de aire del gabinete.</li>
+                <li><strong>Gestión Térmica y Undervolt en BIOS:</strong> Configuración avanzada de curvas de ventilación, aplicación de pastas térmicas de alta conductividad y ajuste fino de voltajes (<em>Undervolting</em>) para reducir temperaturas manteniendo el máximo rendimiento en FPS y trabajo pesado.</li>
+                <li><strong>Mantenimiento Integral:</strong> Diagnóstico de fallos de hardware, recuperación de sistemas, instalación limpia de sistemas operativos y optimización de latencia.</li>
+              </ul>
+              <div class="mt-2">
+                <span class="badge badge-tech">Ensamblaje Custom PC</span>
+                <span class="badge badge-tech">BIOS & Undervolt</span>
+                <span class="badge badge-tech">Optimización Térmica</span>
+                <span class="badge badge-tech">Soporte Técnico</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Desarrollo de Software & Bases de Datos -->
+          <div class="col-md-6" data-item-filtrable data-nivel1="fullstack" data-nivel2="actual">
+            <div class="card-custom p-4 shadow d-flex flex-column">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-braces fs-2 text-cyan me-3"></i>
+                <h4 class="card-title m-0">Ingeniería de Software & Bases de Datos</h4>
+              </div>
+              <p class="card-text mb-2">
+                En mi formación académica y práctica diaria desarrollo soluciones de software aplicando programación orientada a objetos, estructuras lógicas sólidas y diseño normalizado de bases de datos relacionales.
+              </p>
+              <ul class="detail-list flex-grow-1">
+                <li><strong>Motores Relacionales (SQL Server & PostgreSQL):</strong> Diseño de diagramas Entidad-Relación, normalización, vistas, procedimientos almacenados, respaldos y consultas complejas optimizadas.</li>
+                <li><strong>Ecosistema C# y .NET:</strong> Desarrollo de aplicaciones de escritorio con Windows Forms y arquitecturas web en ASP.NET aplicando buenas prácticas y separación de responsabilidades.</li>
+                <li><strong>Desarrollo Web Interactivo:</strong> Maquetación responsiva con Bootstrap 5 y manipulación pura del DOM con JavaScript para crear experiencias dinámicas sin depender de recargas de página.</li>
+              </ul>
+              <div class="mt-2">
+                <span class="badge badge-tech">SQL Server / PostgreSQL</span>
+                <span class="badge badge-tech">C# / ASP.NET / WinForms</span>
+                <span class="badge badge-tech">HTML5 / CSS3 / JS</span>
+                <span class="badge badge-tech">Bootstrap 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="empty-filter-msg" data-filter-empty>
+          <i class="bi bi-search fs-3 d-block mb-2 text-cyan"></i>
+          No hay elementos para esa combinación de filtros.
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         GAMING & MÚSICA (DESCRIPCIONES DETALLADAS + FILTRADO MULTINIVEL)
+         ==================================================== -->
+    <section id="gustos" class="mb-5 pt-4">
+      <div class="section-header-wrap is-collapsed" data-section-target="#gustos-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Gaming & Música Favorita</h2>
+            <p class="text-muted small m-0 mt-1">Mi trayectoria en videojuegos (Tekken 8 God of Destruction, God of War, Half-Life...) y selección musical (Chayanne, Arjona, Cuco, Mac DeMarco).</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-expand me-1"></i>Clic para desplegar</span>
+          <button type="button" class="section-burger-btn is-collapsed" data-section-target="#gustos-content" aria-label="Desplegar o plegar sección Gaming y Música">
+            <i class="bi bi-arrows-expand"></i>
+            <span class="burger-text">Desplegar</span>
+          </button>
+          <a href="gaming.html" class="btn btn-sm btn-outline-info" onclick="event.stopPropagation()">Ver en página dedicada <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content is-collapsed" id="gustos-content">
+        <div class="row g-4">
+          
+          <!-- PRIMERO GAMING (CON DESCRIPCIONES EXTENSAS Y DETALLADAS) -->
+          <div class="col-12" data-filter-section="juegos">
+            <div class="card-custom p-4 shadow">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                <h3 class="card-title m-0"><i class="bi bi-controller me-2"></i>Mi Historial y Catálogo Detallado de Gaming</h3>
+                <span class="badge badge-rank"><i class="bi bi-trophy-fill me-1"></i>Tekken 8 Ranked: God of Destruction</span>
+              </div>
+              <p class="card-text mb-3">
+                Los videojuegos para mí van mucho más allá del entretenimiento casual: representan tanto historias inolvidables que formaron parte de mi vida como un campo de entrenamiento mental, reflejos, lectura de rival y superación competitiva en torneos. Puedes explorar cada entrega usando los botones de <strong>filtrado multinivel</strong> por género y por mi vivencia personal:
+              </p>
+              
+              <!-- Filtrado Multinivel de Juegos -->
+              <div class="multilevel-filter-box">
+                <div class="filter-level-row">
+                  <span class="filter-level-label"><i class="bi bi-joystick"></i>Nivel 1 (Género):</span>
+                  <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todos</button>
+                  <button class="filter-btn" data-filter-level="1" data-filter-value="pelea">Pelea / Fighting</button>
+                  <button class="filter-btn" data-filter-level="1" data-filter-value="aventura">Acción & Aventura</button>
+                  <button class="filter-btn" data-filter-level="1" data-filter-value="shooter">Shooter / Battle Royale</button>
+                  <button class="filter-btn" data-filter-level="1" data-filter-value="plataformas">Plataformas / Ritmo & Puzzle</button>
+                </div>
+                <div class="filter-level-row">
+                  <span class="filter-level-label"><i class="bi bi-star-fill"></i>Nivel 2 (Vivencia):</span>
+                  <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todas</button>
+                  <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="torneos">Competitivo & Torneos</button>
+                  <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="historia">Parte de mi vida / Historia</button>
+                  <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="complejidad">Reto & Complejidad</button>
+                  <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="no-gusto">No fue de mi agrado</button>
+                </div>
+                <div class="filter-status-bar">
+                  <span data-filter-count>Mostrando 12 de 12</span>
+                  <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+                </div>
+              </div>
+
+              <!-- Lista de Juegos en Grid Responsivo con Descripciones Profundas -->
+              <div class="row g-3" id="listaJuegos">
+
+                <!-- 1. Tekken 8 -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="pelea" data-nivel2="torneos complejidad">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/1778820/header.jpg" alt="Tekken 8" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-fire text-warning me-2"></i>Tekken 8</span>
+                      <div>
+                        <span class="badge badge-rank">Ranked: God of Destruction</span>
+                        <span class="badge badge-tech">Torneos Competitivos</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Uno de mis mayores logros competitivos en el gaming. Me dediqué con total disciplina a estudiar el juego a profundidad para competir en torneos: dominio de <em>frame data</em>, castigos exactos (<em>punishment</em>), movimiento avanzado (<em>Korean Backdash</em> y <em>sidestepping</em>), aprovechamiento del sistema <em>Heat</em>, optimización de combos con muro y lectura psicológica del oponente, logrando escalar en clasificatorias hasta alcanzar el rango máximo de <strong>God of Destruction</strong> en Ranked.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 2. Saga God of War -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="aventura" data-nivel2="historia">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/1593500/header.jpg" alt="Saga God of War" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-shield-shaded text-cyan me-2"></i>Toda la Saga de God of War</span>
+                      <div>
+                        <span class="badge badge-highlight">Parte de mi vida</span>
+                        <span class="badge badge-tech">Saga Completa</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Toda la saga de <strong>God of War</strong> literalmente fue parte de mi vida y me acompañó en distintas etapas de mi crecimiento. Desde la brutalidad épica de la mitología griega (<em>God of War I, II, III, Chains of Olympus, Ghost of Sparta y Ascension</em>) blandiendo las Espadas del Caos, hasta la madurez narrativa y emocional de la era nórdica (<em>God of War 2018 y Ragnarök</em>). La evolución de Kratos entre la ira, el sacrificio y la redención la convierte en mi franquicia más querida.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 3. Fortnite -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="shooter" data-nivel2="torneos">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn2.unrealengine.com/social-image-chapter4-s3-3840x2160-d35912cc25ad.jpg" alt="Fortnite" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-crosshair text-cyan me-2"></i>Fortnite</span>
+                      <div>
+                        <span class="badge badge-highlight">Participación en Torneos</span>
+                        <span class="badge badge-tech">Battle Royale</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Un título al que le invertí muchísimas horas de práctica mecánica intensiva (construcción rápida, <em>piece control</em>, edición a alta velocidad, <em>box-fighting</em> y rotaciones estratégicas en zonas finales). Llegué a participar en varios torneos competitivos; y aunque en esos certámenes no obtuve premios monetarios y <strong>solo gané experiencia</strong>, ese roce competitivo me enseñó a mantener la calma en cierres de partida con decenas de jugadores vivos y a perfeccionar mi toma de decisiones bajo presión.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 4. inFAMOUS 2 -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="aventura" data-nivel2="historia">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Infamous_2.png" alt="inFAMOUS 2" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-lightning-charge-fill text-cyan me-2"></i>inFAMOUS 2</span>
+                      <div>
+                        <span class="badge badge-highlight">Favorito por su Historia</span>
+                        <span class="badge badge-tech">Acción / Mundo Abierto</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Una joya inolvidable que me gustó profundamente por su <strong>modo historia</strong>. Acompañar a Cole MacGrath por la ciudad de New Marais mientras se prepara para enfrentar a "La Bestia" ofrece una narrativa atrapante donde el sistema de Karma (Héroe o Infame) transforma tanto tus poderes eléctricos/iónicos como el destino de tus aliados, culminando en dos de los finales más emotivos y mejor escritos en la historia de los videojuegos.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 5. Todas las entregas de Half-Life -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="shooter aventura" data-nivel2="historia complejidad">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/220/header.jpg" alt="Saga Half-Life" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-radioactive text-cyan me-2"></i>Todas las entregas de Half-Life</span>
+                      <div>
+                        <span class="badge badge-highlight">Saga Legendaria FPS</span>
+                        <span class="badge badge-tech">Valve / Ciencia Ficción</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Jugué absolutamente <strong>todas las entregas de Half-Life</strong> (<em>Half-Life, Opposing Force, Blue Shift, Half-Life 2, Episode One, Episode Two y Black Mesa</em>). Me fascina cómo revolucionó la industria contando una historia de ciencia ficción profunda sin cortar jamás la cámara del jugador: desde el incidente de resonancia en los laboratorios de Black Mesa hasta la rebelión contra la Alianza (Combine) en Ciudad 17 usando el motor de físicas y el Arma de Gravedad.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 6. Geometry Dash -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="plataformas" data-nivel2="complejidad">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/322170/header.jpg" alt="Geometry Dash" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-boxes text-cyan me-2"></i>Geometry Dash</span>
+                      <div>
+                        <span class="badge badge-highlight">Por su Complejidad</span>
+                        <span class="badge badge-tech">Precisión & Ritmo</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Un juego que me atrapó directamente <strong>por su altísima complejidad</strong> técnica y mental. Superar niveles difíciles y <em>Demons</em> exige una sincronización perfecta con el ritmo de la música electrónica, memoria muscular exacta al milisegundo, cambios constantes de gravedad y vehículos, y sobre todo la resiliencia psicológica de fallar al 95% y volver a intentarlo con concentración absoluta hasta lograr el 100%.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 7. Valorant -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="shooter" data-nivel2="no-gusto">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Valorant_cover.jpg" alt="Valorant" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-slash-circle text-danger me-2"></i>Valorant</span>
+                      <div>
+                        <span class="badge badge-dislike">No fue de mi agrado</span>
+                        <span class="badge badge-tech">Tactical Hero Shooter</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Le di su oportunidad para probar su propuesta competitiva, pero en lo personal <strong>no me gustó porque simplemente no fue de mi agrado</strong>. El ritmo pausado de retención de ángulos combinado con el exceso de habilidades mágicas, humos y flashes de los agentes no conectó con mi estilo de juego, ya que prefiero títulos de acción más directa, duelos puros de habilidad como Tekken o shooters clásicos con mayor dinamismo.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 8. Counter-Strike 2 / CS 1.6 & CS:GO -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="shooter" data-nivel2="torneos complejidad">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg" alt="Counter-Strike 2" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-bullseye text-cyan me-2"></i>Counter-Strike (CS 1.6 / CS:GO / CS2)</span>
+                      <div>
+                        <span class="badge badge-tech">Puntería Pura</span>
+                        <span class="badge badge-tech">Clásico Competitivo</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Nacido de la misma cuna que Half-Life, Counter-Strike es el estándar de oro en disparos tácticos sin habilidades artificiales: puro control de retroceso (<em>spray control</em>), posicionamiento de mira a la cabeza (<em>crosshair placement</em>), manejo de economía por rondas y reflejos instantáneos en situaciones de <em>clutch</em>.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 9. Left 4 Dead 2 -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="shooter" data-nivel2="historia complejidad">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg" alt="Left 4 Dead 2" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-people-fill text-cyan me-2"></i>Left 4 Dead 2</span>
+                      <div>
+                        <span class="badge badge-tech">Acción Cooperativa</span>
+                        <span class="badge badge-tech">Source Engine</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Otro clásico imperecedero de Valve que disfruté muchísimo tanto en campañas en dificultad Experto como en el modo Enfrentamiento (<em>Versus</em>). Su "Director de IA" hace que ninguna partida sea igual, exigiendo trabajo en equipo constante, reacción rápida ante infectados especiales (Chargers, Hunters, Tanks) y puntería en movimiento.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 10. Portal 1 & 2 -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="plataformas" data-nivel2="historia complejidad">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/620/header.jpg" alt="Portal 1 y 2" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-bounding-box-circles text-cyan me-2"></i>Portal 1 & Portal 2</span>
+                      <div>
+                        <span class="badge badge-tech">Lógica & Física</span>
+                        <span class="badge badge-tech">Universo Half-Life</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Situado dentro del mismo universo narrativo de Half-Life en los laboratorios de Aperture Science. Me encantó por la genialidad de resolver acertijos tridimensionales conservando el impulso físico a través de portales, acompañado del humor negro inigualable de GLaDOS y Wheatley.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 11. GTA: San Andreas & GTA V -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="aventura" data-nivel2="historia">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA San Andreas y GTA V" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-car-front-fill text-cyan me-2"></i>GTA: San Andreas & GTA V</span>
+                      <div>
+                        <span class="badge badge-tech">Mundo Abierto</span>
+                        <span class="badge badge-tech">Historia Icónica</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Dos entregas fundamentales en mi lista de juegos jugados: desde la legendaria historia de Carl "CJ" Johnson recorriendo Los Santos, San Fierro y Las Venturas en <em>San Andreas</em>, hasta la escala cinematográfica, los golpes estratégicos y el enorme mundo vivo de <em>Grand Theft Auto V</em>.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 12. Devil May Cry & Mortal Kombat -->
+                <div class="col-md-6" data-item-filtrable data-nivel1="pelea aventura" data-nivel2="complejidad">
+                  <div class="game-card-item h-100">
+                    <div class="media-banner-wrap">
+                      <img src="https://cdn.akamai.steamstatic.com/steam/apps/601150/header.jpg" alt="Devil May Cry y Mortal Kombat" class="media-banner-img" loading="lazy">
+                    </div>
+                    <div class="game-card-header">
+                      <span class="game-title"><i class="bi bi-lightning-fill text-cyan me-2"></i>Saga Devil May Cry & Mortal Kombat</span>
+                      <div>
+                        <span class="badge badge-tech">Combos Avanzados</span>
+                        <span class="badge badge-tech">Ejecución Mecánica</span>
+                      </div>
+                    </div>
+                    <p class="game-desc">
+                      Títulos que alimentaron mi gusto por la exigencia mecánica: en <em>Devil May Cry</em> buscando encadenar combos estilizados de rango <strong>SSS</strong> cambiando de armas y estilos al vuelo, y en <em>Mortal Kombat</em> perfeccionando el juego neutro, <em>frame traps</em> y castigos contundentes en peleas 1 contra 1.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="empty-filter-msg" data-filter-empty>
+                <i class="bi bi-controller fs-3 d-block mb-2 text-cyan"></i>
+                No se encontraron juegos con esos criterios de filtrado.
+              </div>
+            </div>
+          </div>
+
+          <!-- SEGUNDO BLOQUE: MÚSICA (CON REQUISITO 1: DOBLE SELECCIÓN CHAYANNE Y ARJONA) -->
+          <div class="col-12" data-filter-section="musica">
+            <div class="card-custom p-4 shadow">
+              <h3 class="card-title mb-2"><i class="bi bi-music-note-beamed me-2"></i>Música, Artistas Favoritos & Ambientes Sonoros</h3>
+              <p class="card-text mb-4">
+                La música es el motor que regula mi concentración durante el día: ya sea para entrar en estado de <em>flow</em> programando durante horas, para desconectar después de la universidad con el estilo melódico de <strong>Cuco</strong> y <strong>Mac DeMarco</strong>, o para activar la adrenalina al máximo en mis entrenamientos de fuerza en el gimnasio.
+              </p>
+
+              <!-- REQUISITO 1 DEL DOCENTE: Doble Selección (Select dependiente manipulado por DOM) -->
+              <div class="doble-seleccion-box">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                  <h4 class="card-title m-0 text-cyan"><i class="bi bi-diagram-3-fill me-2"></i>1. Doble Selección Dinámica: Género & Artista (DOM)</h4>
+                  <span class="badge badge-rank">Requisito 1 de Clase</span>
+                </div>
+                <p class="card-text small mb-3">
+                  Demostración de <strong>selects dependientes encadenados mediante manipulación pura del DOM</strong>. Al seleccionar un género en el primer menú, el segundo menú se puebla dinámicamente con sus artistas (por ejemplo: <code>Romántica &rarr; Chayanne, Ricardo Arjona</code>):
+                </p>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="selectGenero" class="form-label small fw-bold text-muted">1. Selecciona el Género Musical:</label>
+                    <select id="selectGenero" class="form-select form-control-custom">
+                      <option value="">-- Selecciona un género --</option>
+                      <option value="romantica">Romántica (Chayanne, Ricardo Arjona - Ejemplo de clase)</option>
+                      <option value="indie">Indie / Dream Pop (Cuco, Mac DeMarco)</option>
+                      <option value="rock">Rock en Español / Clásico (Soda Stereo)</option>
+                      <option value="gym">Gym / Phonk & Fuerza (Alta Intensidad)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="selectArtista" class="form-label small fw-bold text-muted">2. Artista / Canción (Doble Selección):</label>
+                    <select id="selectArtista" class="form-select form-control-custom" disabled>
+                      <option value="">-- Primero elige un género arriba --</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Contenedor dinámico generado por el DOM -->
+                <div id="resultadoDobleSeleccion" class="mt-3" style="display: none;"></div>
+              </div>
+
+              <!-- Filtrado Multinivel de Música -->
+              <div class="multilevel-filter-box">
+                <div class="filter-level-row">
+                  <span class="filter-level-label"><i class="bi bi-disc"></i>Nivel 1 (Estilo):</span>
+                  <button class="filter-btn active" data-filter-level="1" data-filter-value="todos">Todos</button>
+                  <button class="filter-btn" data-filter-level="1" data-filter-value="indie">Indie / Dream Pop</button>
+                  <button class="filter-btn" data-filter-level="1" data-filter-value="energia">Gym / Energía & Phonk</button>
+                  <button class="filter-btn" data-filter-level="1" data-filter-value="chill">Lo-Fi & Synthwave</button>
+                </div>
+                <div class="filter-level-row">
+                  <span class="filter-level-label"><i class="bi bi-headphones"></i>Nivel 2 (Momento):</span>
+                  <button class="filter-btn filter-btn-sub active" data-filter-level="2" data-filter-value="todos">Todos</button>
+                  <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="programar">Para Programar</button>
+                  <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="entrenar">Para el Gimnasio (Fuerza)</button>
+                  <button class="filter-btn filter-btn-sub" data-filter-level="2" data-filter-value="relajar">Para Relajarme</button>
+                </div>
+                <div class="filter-status-bar">
+                  <span data-filter-count>Mostrando 4 de 4</span>
+                  <button type="button" class="btn-reset-filter" data-filter-reset>Restablecer filtros</button>
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6" data-item-filtrable data-nivel1="indie" data-nivel2="programar relajar">
+                  <div class="music-card-item h-100">
+                    <div class="music-media-layout">
+                      <div class="music-cover-wrap">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/75/cc/b7/75ccb720-1e2f-37c2-4b6c-a91dddcaf872/22UMGIM34482.rgb.jpg/600x600bb.jpg" alt="Cuco - Para Mi" class="music-album-cover" loading="lazy">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="game-card-header">
+                          <span class="game-title"><i class="bi bi-vinyl-fill text-cyan me-2"></i>Cuco</span>
+                          <span class="badge badge-highlight">Indie Pop / Dream Pop</span>
+                        </div>
+                        <p class="game-desc">
+                          Uno de mis artistas favoritos de cabecera. Su fusión única de sintetizadores nostálgicos, trompetas suaves, bases psicodélicas y letras bilingües crea una atmósfera envolvente que me acompaña tanto en noches largas escribiendo código como en momentos de descanso.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-item-filtrable data-nivel1="indie" data-nivel2="relajar programar">
+                  <div class="music-card-item h-100">
+                    <div class="music-media-layout">
+                      <div class="music-cover-wrap">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e0/04/eb/e004eb2b-754f-4a76-9ecc-87d4eea2a327/cover.jpg/600x600bb.jpg" alt="Mac DeMarco - Salad Days" class="music-album-cover" loading="lazy">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="game-card-header">
+                          <span class="game-title"><i class="bi bi-vinyl-fill text-cyan me-2"></i>Mac DeMarco</span>
+                          <span class="badge badge-highlight">Indie Rock / Slacker Rock</span>
+                        </div>
+                        <p class="game-desc">
+                          El sonido inconfundible de sus guitarras con efecto <em>chorus</em> analógico y ritmos relajados (en álbumes como <em>Salad Days</em> o <em>This Old Dog</em>) es mi elección predilecta para despejar la mente, bajar el estrés académico y mantener la creatividad fluida mientras diseño interfaces.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-item-filtrable data-nivel1="energia" data-nivel2="entrenar">
+                  <div class="music-card-item h-100">
+                    <div class="music-media-layout">
+                      <div class="music-cover-wrap">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Playlist Fuerza y Gimnasio" class="music-album-cover" loading="lazy">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="game-card-header">
+                          <span class="game-title"><i class="bi bi-lightning-charge-fill text-warning me-2"></i>Playlists de Fuerza, Phonk & Hard Rock (Gym)</span>
+                          <span class="badge badge-rank">Entrenamiento 6 Días/Sem</span>
+                        </div>
+                        <p class="game-desc">
+                          Cuando toca entrenar fuerza pesada en el gimnasio, cambio hacia ritmos agresivos, bajos profundos y alto BPM que elevan la concentración antes de cada serie exigente, ayudándome a mantener la intensidad de principio a fin de la rutina.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-item-filtrable data-nivel1="chill" data-nivel2="programar">
+                  <div class="music-card-item h-100">
+                    <div class="music-media-layout">
+                      <div class="music-cover-wrap">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Lo-Fi Hip Hop y Synthwave" class="music-album-cover" loading="lazy">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="game-card-header">
+                          <span class="game-title"><i class="bi bi-code-square text-cyan me-2"></i>Lo-Fi Hip Hop, Synthwave & Deep Focus</span>
+                          <span class="badge badge-tech">Sesiones de Código & SQL</span>
+                        </div>
+                        <p class="game-desc">
+                          Pistas instrumentales continuas y electrónica retro que utilizo cuando necesito concentración profunda sin distracciones vocales: ideal para depurar lógica compleja en JavaScript/C#, estructurar tablas en SQL Server o estudiar arquitecturas de Inteligencia Artificial.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="empty-filter-msg" data-filter-empty>
+                <i class="bi bi-music-note-list fs-3 d-block mb-2 text-cyan"></i>
+                No hay estilos musicales que coincidan con ese filtro.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Horario con Descripción Detallada -->
+    <section id="horario" class="mb-5 pt-4">
+      <div class="section-header-wrap is-collapsed" data-section-target="#horario-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Mi Horario y Organización Semanal</h2>
+            <p class="text-muted small m-0 mt-1">Planificación horaria en tiempo real para estudios, trabajo técnico y entrenamiento.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-expand me-1"></i>Clic para desplegar</span>
+          <button type="button" class="section-burger-btn is-collapsed" data-section-target="#horario-content" aria-label="Desplegar o plegar sección Horario">
+            <i class="bi bi-arrows-expand"></i>
+            <span class="burger-text">Desplegar</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content is-collapsed" id="horario-content">
+        <p class="text-muted mb-4">
+          La clave para equilibrar mis estudios universitarios en Ingeniería de Sistemas en la UPDS, el desarrollo de proyectos de software, los trabajos técnicos de hardware, los <strong>6 días de entrenamiento de fuerza en el gimnasio</strong> y las prácticas de voleibol competitivo radica en una planificación semanal estricta. A continuación se visualiza mi cronograma actualizado en tiempo real:
+        </p>
+        <div class="iframe-container shadow-lg">
+          <iframe 
+            src="https://docs.google.com/spreadsheets/d/1Ve2lEWtBt52dYJkAR1pNttrgSYGb_Ym4D73VpQwKV1I/htmlembed?widget=true&amp;headers=false" 
+            width="100%" 
+            height="500" 
+            style="border: none;"
+            title="Horario Semanal de Gabriel">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUISITO 4 DOCENTE: Formulario con Todas las Validaciones Reactivas -->
+    <section id="contacto" class="mb-5 pt-4">
+      <div class="section-header-wrap is-collapsed" data-section-target="#contacto-content" title="Haz clic para desplegar o plegar esta sección">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-chevron-down toggle-arrow-icon"></i>
+          <div>
+            <h2 class="m-0">Registro Académico & Contacto Directo</h2>
+            <p class="text-muted small m-0 mt-1">Sistema interactivo de validación en tiempo real mediante eventos del DOM y canales directos de comunicación.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge badge-collapse-hint"><i class="bi bi-arrows-expand me-1"></i>Clic para desplegar</span>
+          <button type="button" class="section-burger-btn is-collapsed" data-section-target="#contacto-content" aria-label="Desplegar o plegar sección Contacto">
+            <i class="bi bi-arrows-expand"></i>
+            <span class="burger-text">Desplegar</span>
+          </button>
+          <a href="contacto.html" class="btn btn-sm btn-outline-info" onclick="event.stopPropagation()">Ver en página dedicada <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="section-collapsible-content is-collapsed" id="contacto-content">
+        <div class="card-custom p-4 p-md-5 shadow">
+          <p class="card-text mb-4">
+            Completa el siguiente formulario con tus datos universitarios o de contacto. Cada campo cuenta con <strong>validación reactiva instantánea</strong> (verificación de longitud y caracteres alfabéticos en nombre, selección de fecha, expresión regular para números de celular bolivianos de 8 dígitos iniciados en 6 o 7, selección obligatoria de carrera universitaria y rango de semestre del 1 al 10). Al enviar o interactuar con el formulario, el sistema verificará cada regla y te permitirá remitir la confirmación directamente a mi WhatsApp.
+          </p>
+          
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              
+              <!-- 1. Nombre Completo -->
+              <div class="col-12">
+                <label for="nombre" class="form-label small fw-bold text-muted">
+                  Nombre Completo <span class="text-danger">*</span>
+                </label>
+                <input type="text" id="nombre" class="form-control form-control-custom" placeholder="Ej. Gabriel Alejandro Garay Esprella" autocomplete="name">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Mínimo 3 letras. Solo caracteres alfabéticos y espacios (sin números).</small>
+                <div class="error-feedback" id="err-nombre"></div>
+                <div class="valid-feedback-custom" id="val-nombre"></div>
+              </div>
+
+              <!-- 2. Fecha de Registro -->
+              <div class="col-md-6">
+                <label for="fecha" class="form-label small fw-bold text-muted">
+                  Fecha de Registro <span class="text-danger">*</span>
+                </label>
+                <input type="date" id="fecha" class="form-control form-control-custom">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Selecciona la fecha válida de registro en el calendario.</small>
+                <div class="error-feedback" id="err-fecha"></div>
+                <div class="valid-feedback-custom" id="val-fecha"></div>
+              </div>
+
+              <!-- 3. Celular -->
+              <div class="col-md-6">
+                <label for="celular" class="form-label small fw-bold text-muted">
+                  Celular (8 dígitos - Bolivia) <span class="text-danger">*</span>
+                </label>
+                <input type="tel" id="celular" class="form-control form-control-custom" placeholder="Ej. 60120550" maxlength="8" autocomplete="tel">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Debe contener exactamente 8 dígitos bolivianos (iniciar en 6 o 7).</small>
+                <div class="error-feedback" id="err-celular"></div>
+                <div class="valid-feedback-custom" id="val-celular"></div>
+              </div>
+
+              <!-- 4. Carrera -->
+              <div class="col-md-6">
+                <label for="carrera" class="form-label small fw-bold text-muted">
+                  Carrera Universitaria <span class="text-danger">*</span>
+                </label>
+                <select id="carrera" class="form-select form-control-custom">
+                  <option value="">-- Selecciona carrera universitaria --</option>
+                  <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                  <option value="Ingeniería en Redes y Telecomunicaciones">Ingeniería en Redes y Telecomunicaciones</option>
+                  <option value="Administración de Empresas">Administración de Empresas</option>
+                  <option value="Contaduría Pública">Contaduría Pública</option>
+                  <option value="Derecho">Derecho</option>
+                </select>
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Elige el programa de estudios correspondiente en la UPDS.</small>
+                <div class="error-feedback" id="err-carrera"></div>
+                <div class="valid-feedback-custom" id="val-carrera"></div>
+              </div>
+
+              <!-- 5. Semestre -->
+              <div class="col-md-6">
+                <label for="semestre" class="form-label small fw-bold text-muted">
+                  Semestre Actual (1 al 10) <span class="text-danger">*</span>
+                </label>
+                <input type="number" id="semestre" class="form-control form-control-custom" min="1" max="10" placeholder="Ej. 4">
+                <small class="field-hint"><i class="bi bi-info-circle me-1"></i>Número entero entre 1 y 10 correspondiente a tu semestre cursado.</small>
+                <div class="error-feedback" id="err-semestre"></div>
+                <div class="valid-feedback-custom" id="val-semestre"></div>
+              </div>
+
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-submit-form w-100 mt-4">
+              <i class="bi bi-send-check-fill me-2"></i>Registrar Datos y Validar
+            </button>
+          </form>
+
+          <div id="alertaBox" class="mt-4"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer con Redes Sociales Funcionales -->
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="small text-uppercase fw-bold text-cyan mb-2">Conecta conmigo en mis redes oficiales</p>
+      <p class="text-muted small mx-auto mb-3" style="max-width: 650px;">
+        ¿Necesitas desarrollo web, asesoría en bases de datos, servicio técnico de hardware ("Tec. Gabriel") o quieres conversar sobre tecnología, entrenamientos y gaming competitivo? Escríbeme directamente:
+      </p>
+      <div class="social-links-wrapper mb-3">
+        <a href="https://www.facebook.com/gabriel.garay.5458/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-btn facebook" title="Facebook de Gabriel Garay">
+          <i class="bi bi-facebook"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://wa.me/59160120550" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="Enviar mensaje por WhatsApp al 60120550">
+          <i class="bi bi-whatsapp"></i>
+          <span>WhatsApp: 60120550</span>
+        </a>
+        <a href="https://www.tiktok.com/@pou_gotico_culon" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" title="TikTok @pou_gotico_culon">
+          <i class="bi bi-tiktok"></i>
+          <span>TikTok (@pou_gotico_culon)</span>
+        </a>
+      </div>
+      <p class="text-muted small m-0">&copy; 2026 Gabriel Alejandro Garay Esprella (Tec. Gabriel) • La Paz, Bolivia. Desarrollado con arquitectura modular en HTML5, CSS3, JavaScript y Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <!-- Script de Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lógica y Scripts del DOM en archivo externo -->
+  <script src="script.js"></script>
+</body>
+</html>
